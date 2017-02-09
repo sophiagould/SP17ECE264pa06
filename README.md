@@ -104,7 +104,7 @@ int sum(int * arr, int nels) {
   if (nels = 1) return arr[0];
   
   int sum1 = sum(arr, nels/2);
-  int sum2 = sum(&arr[(nels + 1)/2], (nels + 1)/2);
+  int sum2 = sum(&arr[nels/2], (nels + 1)/2);
   
   return sum1 + sum2
 }
