@@ -14,7 +14,7 @@ incorrect, you have two options:
 
 1. You can download *pre-built* object files for
    [`student.o`](https://engineering.purdue.edu/~milind/ece264/2017spring/assignments/pa06/student.o)
-   and [`pa06.o`](https://engineering.purdue.edu/~milind/ece264/2017spring/assignments/pa06/student.o).
+   and [`pa06.o`](https://engineering.purdue.edu/~milind/ece264/2017spring/assignments/pa06/pa06.o).
    You can then link these files in your Makefile instead of compiling your 
    own versions of `student.c` and `pa06.c`. If you take this option *you will 
    have to develop your code on the ecegrid machines*.
