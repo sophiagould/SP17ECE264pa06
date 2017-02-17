@@ -8,7 +8,7 @@ void msort(Student * base, int nel, int (*compar)(const void *, const void *)) {
 	
 	//Base case: if the array has one or fewer elements, it's already sorted
 	//so just return.
-	if (nel == 1){
+	if (nel <= 1){
 		return;
 	}
 
@@ -60,7 +60,7 @@ void msort(Student * base, int nel, int (*compar)(const void *, const void *)) {
 Student * merge(Student * base1, int nel1, Student * base2, int nel2, int (*compar)(const void *, const void *)) {
 	
 	//1. Allocate space for the returned merged array
-	Student* answer = malloc(sizeof(*answer) * (nel1 + nel2));	
+	Student * answer = malloc(sizeof(*answer) * (nel1 + nel2));	
 	//FILL IN
 	
 	//2. Create indices to keep track of where you are in the three arrays

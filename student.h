@@ -1,8 +1,8 @@
 // You must modify this file
 #ifndef PA05_H
 #define PA05_H
-#include "constant.h"
 #include <stdbool.h>
+#define NAME_LENGTH 80
 
 // create a structure type that has the following attributes
 // please make sure the names are exactly the same
