@@ -8,7 +8,7 @@ void msort(Student * base, int nel, int (*compar)(const void *, const void *)) {
 	
 	//Base case: if the array has one or fewer elements, it's already sorted
 	//so just return.
-	if (nel <= 1){
+	if (nel == 1){
 		return;
 	}
 
