@@ -41,11 +41,11 @@ void msort(Student * base, int nel, int (*compar)(const void *, const void *)) {
 
 	//FILL IN
 	
-	msort(&base[twpe], nel - twpe, (compar));
+	msort(&((base)[twpe]), nel - twpe, (compar));
 	//3a. Merge the two arrays (use merge)
 
 	//FILL IN
-	Student * answer = merge(base, twpe, &base[twpe], nel - twpe, (compar));
+	Student * answer = merge(base, twpe, &base[twpe], (nel - twpe), (compar));
 	//3b. Copy the merged array over top of the original array (use copy)
 	//Don't forget to free the array you no longer need!
 
@@ -74,22 +74,22 @@ Student * merge(Student * base1, int nel1, Student * base2, int nel2, int (*comp
 		swp = compar(&base1[a1track], &base2[a2track]);
 		if(swp == 0){
 			answer[ltrack++] = base1[a1track++];
+			answer[ltrack++] = base2[a2track++];
 		}else if(swp >= 1){
 			answer[ltrack++] = base2[a2track++];
 		}else{
 			answer[ltrack++] = base1[a1track++];
-			answer[ltrack++] = base2[a2track++];
 		}
 	}		
 
 	if(a1track < nel1){
 		for(a1track = a1track; a1track < nel1; a1track++){
-			answer[ltrack++] = base1[a1track++];
+			answer[ltrack++] = base1[a1track];
 		}
 	}
 	if(a2track < nel2){
 		for(a2track = a2track; a2track < nel2; a2track++){
-			answer[ltrack++] = base2[a2track++];
+			answer[ltrack++] = base2[a2track];
 		}
 	}
 		
