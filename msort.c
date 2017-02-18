@@ -1,7 +1,6 @@
 #include "msort.h"
 #include "student.h"
 #include <stdio.h>
-#include "student.c"
 
 #ifndef OMIT_MSORT
 void msort(Student * base, int nel, int (*compar)(const void *, const void *)) {
